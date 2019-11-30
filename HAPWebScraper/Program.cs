@@ -10,6 +10,8 @@ namespace HAPWebScraper
     {
         static void Main(string[] args)
         {
+            var scraper = new Scraper();
+            scraper.Start();
         }
     }
 }
