@@ -17,24 +17,11 @@ namespace HAPWebScraper
         }
         public void LoadWebPage()
         {
-            var html = @"https://www.google.com/finance";
+            var html = @"https://money.cnn.com/data/markets/dow/";
 
             HtmlWeb web = new HtmlWeb();
-            
-
-            htmlDoc = web.Load(html);
-
-            var node = htmlDoc.DocumentNode.SelectSingleNode("//html");
-            if(node != null)
-            {
-                Console.WriteLine("Node Name: " + node.Name + "\n" + node.OuterHtml);
-            }
-
-            
-
-
+            htmlDoc = web.Load(html);          
         }
-
 
     }
 }
