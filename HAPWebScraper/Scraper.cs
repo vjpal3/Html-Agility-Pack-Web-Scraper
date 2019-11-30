@@ -32,9 +32,26 @@ namespace HAPWebScraper
             foreach (var row in rowsNodeList)
             {
                 var cells = row.SelectNodes("td");
-                for (int i=0; i < cells.Count; i++)
+                for (int i = 0; i < cells.Count; i++)
                 {
-                    Console.Write(cells[i].InnerText + "\t");
+                    var cellData = cells[i].InnerText;
+                    if (i == 0)
+                    {
+                        cellData = cellData.Replace("&nbsp;", " ");
+                    }
+                    else
+                    {
+                        if (cellData.StartsWith("+"))
+                        {
+                            cellData = cellData.Replace("+", "");
+                        }
+                        if (cellData.EndsWith("%"))
+                        {
+                            cellData = cellData.Replace("%", "");
+                        }
+                    }
+                    
+                    Console.Write(cellData + "\t");
                 }
                 Console.WriteLine("\n");
             }
