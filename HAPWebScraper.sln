@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAPWebScraper", "HAPWebScraper\HAPWebScraper.csproj", "{6F099D50-0AEF-4E81-907F-DBE411501773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F099D50-0AEF-4E81-907F-DBE411501773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F099D50-0AEF-4E81-907F-DBE411501773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F099D50-0AEF-4E81-907F-DBE411501773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F099D50-0AEF-4E81-907F-DBE411501773}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F32D1138-A771-4EFD-817D-074C9C1CF3E5}
+	EndGlobalSection
+EndGlobal
