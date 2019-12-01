@@ -135,7 +135,9 @@
     </Compile>
     <Compile Include="Migrations\AppDbContextModelSnapshot.cs" />
     <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\IStockDataRepository.cs" />
     <Compile Include="Models\StockData.cs" />
+    <Compile Include="Models\StockDataRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scraper.cs" />
