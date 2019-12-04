@@ -9,11 +9,9 @@ namespace HAPWebScraper.Models
 {
     class AppDbContext : DbContext
     {
-        private const string connectionString = "Server=(localdb)\\ProjectsV13;Database=HAPScraperDB;Trusted_Connection=True;";
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(Helper.GetConnectionString("HAPScraperDB"));
         }
 
         public DbSet<StockData> StocksData { get; set; }
