@@ -17,6 +17,12 @@ namespace HAPWebScraper
         {
             LoadWebPage();
             TraverseAndScrapeData();
+            SaveData();
+        }
+
+        private void SaveData()
+        {
+            throw new NotImplementedException();
         }
 
         public void LoadWebPage()
