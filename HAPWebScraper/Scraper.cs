@@ -22,7 +22,7 @@ namespace HAPWebScraper
 
         private void SaveData()
         {
-            throw new NotImplementedException();
+            DbWriter.InsertStocksData(StocksData);
         }
 
         public void LoadWebPage()
@@ -51,6 +51,11 @@ namespace HAPWebScraper
                     rowData += cells[i].InnerText + "\t";
                 }
                 StocksData.Add(rowData);
+            }
+
+            foreach (var row in StocksData)
+            {
+                Console.WriteLine(row);
             }
         }
     }
