@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HAPWebScraper.Models;
 using HtmlAgilityPack;
 
 namespace HAPWebScraper
@@ -10,6 +11,7 @@ namespace HAPWebScraper
     class Scraper
     {
         private HtmlDocument htmlDoc;
+        private readonly List<string> StocksData = new List<string>();
 
         public void Start()
         {
@@ -25,6 +27,11 @@ namespace HAPWebScraper
             htmlDoc = web.Load(html);          
         }
 
+        public List<string> GetStocksData()
+        {
+            return StocksData;
+        }
+
         private void TraverseAndScrapeData()
         {
             var tableNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='wsod_dataTableBorder']//table[@class='wsod_dataTable wsod_dataTableBig']");
@@ -32,28 +39,12 @@ namespace HAPWebScraper
             foreach (var row in rowsNodeList)
             {
                 var cells = row.SelectNodes("td");
+                var rowData = "";
                 for (int i = 0; i < cells.Count; i++)
                 {
-                    var cellData = cells[i].InnerText;
-                    if (i == 0)
-                    {
-                        cellData = cellData.Replace("&nbsp;", " ");
-                    }
-                    else
-                    {
-                        if (cellData.StartsWith("+"))
-                        {
-                            cellData = cellData.Replace("+", "");
-                        }
-                        if (cellData.EndsWith("%"))
-                        {
-                            cellData = cellData.Replace("%", "");
-                        }
-                    }
-                    
-                    Console.Write(cellData + "\t");
+                    rowData += cells[i].InnerText + "\t";
                 }
-                Console.WriteLine("\n");
+                StocksData.Add(rowData);
             }
         }
     }
