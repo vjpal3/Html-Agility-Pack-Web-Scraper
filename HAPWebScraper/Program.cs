@@ -12,6 +12,9 @@ namespace HAPWebScraper
         {
             var scraper = new Scraper();
             scraper.Start();
+
+            Console.WriteLine("Press enter to exit");
+            Console.ReadLine();
         }
     }
 }
