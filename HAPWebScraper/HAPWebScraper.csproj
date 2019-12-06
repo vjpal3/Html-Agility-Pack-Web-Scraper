@@ -134,6 +134,14 @@
     <Compile Include="Migrations\20191201022547_NewDatabase.designer.cs">
       <DependentUpon>20191201022547_NewDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20191206015436_ChangeColumnName.cs" />
+    <Compile Include="Migrations\20191206015436_ChangeColumnName.designer.cs">
+      <DependentUpon>20191206015436_ChangeColumnName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20191206015850_AddColumnCompanyName.cs" />
+    <Compile Include="Migrations\20191206015850_AddColumnCompanyName.designer.cs">
+      <DependentUpon>20191206015850_AddColumnCompanyName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AppDbContextModelSnapshot.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\DbWriter.cs" />

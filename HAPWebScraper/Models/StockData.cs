@@ -10,7 +10,8 @@ namespace HAPWebScraper.Models
     {
         public int Id { get; set; }
         public DateTime ScrapeDate { get; set; }
-        public string Company { get; set; }
+        public string Symbol { get; set; }
+        public string CompanyName { get; set; }
         public decimal? Price { get; set; }
         public decimal? Change { get; set; }
         public decimal? PercentChange { get; set; }

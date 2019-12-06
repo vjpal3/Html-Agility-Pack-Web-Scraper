@@ -17,8 +17,10 @@ namespace HAPWebScraper.Models
                 foreach (var item in scrapedData)
                 {
                     var data = item.Split('\t');
-                    
-                    var company = data[0].Replace("&nbsp;", " ");
+
+                    var company = data[0].Replace("&nbsp;", " ").Split(); ;
+                    var symbol = company[0];
+                    var companyName = company[1];
                     var price = ParseDecimalString(data[1].Trim());
                     var change = ParseDecimalString(data[2].Trim());
                     var percentChange = ParseDecimalString(data[3].Trim());
@@ -29,7 +31,8 @@ namespace HAPWebScraper.Models
                     db.Add(new StockData
                     {
                         ScrapeDate = scrapeDate,
-                        Company = company,
+                        Symbol = symbol,
+                        CompanyName = companyName,
                         Price = price,
                         Change = change,
                         PercentChange = percentChange,
